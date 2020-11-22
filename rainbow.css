@@ -5,18 +5,106 @@ body {
 .hint {
     font-family: sans-serif;
     font-weight: 100;
-
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     left: 20px;
-
     display: flex;
+    align-items: center;
 
     height: 100px;
     padding: 4em;
 
     background-color: #fff8;
 
-    align-items: center;
+    
 }
+
+/*media queries*/
+
+@media (max-width: 550px) {
+    .hint {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        left: 20px;
+        display: flex;
+        align-items: center;    
+       
+    }
+}
+
+/*check the exact distance from borders befor send to review!
+check the overlapping properties*/
+
+@media (min-width: 550px) {
+    .hint {
+    position: fixed;
+    transform: translate(calc(50vw - 55%), calc(50vh - 50%));
+    right: 5vw;
+    left: 5vw;
+    transition-property: transform;
+    transition-duration: 1s;
+    }
+}
+
+
+@media (min-width: 650px) {
+    .hint {
+    position: fixed;
+    top: 35vh;
+    right: 5vw;
+    left: 5vw;
+    transition-property: top;
+    transition-duration: 1s;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: red;
+        transition-property: background-color;
+        transition-duration: 1s;
+    }    
+}
+
+@media (min-width: 600px) {
+    body {
+        background-color: orange;
+        transition-property: background-color;
+        transition-duration: 2s;        
+    }
+}
+
+@media (min-width: 650px) {
+    body {
+        background-color: yellow;
+    }
+}
+
+@media (min-width: 700px) {
+    body {
+        background-color: green;
+    }
+}
+
+@media (min-width: 750px) {
+    body {
+        background-color: blue;
+    }
+}
+
+@media (min-width: 800px) {
+    body {
+        background-color: indigo;
+    }
+} 
+
+@media (min-width: 850px) {
+    body {
+        background-color: purple;
+    }
+}
+
+
+ 
